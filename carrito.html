@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | Raíz Viva</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main>
+    <section id="pedido" class="seccion-base">
+      <h2 class="titulo-seccion">Resumen de tu Compra</h2>
+      <p style="text-align: center; margin-bottom: 20px;">Confirma tus productos y datos para coordinar la entrega en Medellín.</p>
+      
+      <div class="form-contenedor" style="display: block;"> 
+        <form action="https://api.whatsapp.com/send" method="get">
+          <input type="hidden" name="phone" value="573001234567">
+          
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Nombre completo:</label>
+            <input type="text" name="nombre" placeholder="" required>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Tu WhatsApp:</label>
+            <input type="tel" name="whatsapp" placeholder="" required>
+          </div>
+
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Barrio / Sector:</label>
+            <input type="text" name="barrio" placeholder="" required>
+          </div>
+
+          <div class="seleccion-multiple">
+            <p >Confirma tus productos:</p>
+            
+            <label class="item-check"><input type="checkbox" name="prod" value="Shampoo Hidratante"> Shampoo Hidratante ($18.000)</label>
+            <label class="item-check"><input type="checkbox" name="prod" value="Mascarilla Nutritiva"> Mascarilla Nutritiva ($22.000)</label>
+            <label class="item-check"><input type="checkbox" name="prod" value="Aceite Capilar"> Aceite Capilar ($25.000)</label>
+            <label class="item-check"><input type="checkbox" name="prod" value="Shampoo Volumen"> Shampoo Volumen ($19.000)</label>
+            <label class="item-check"><input type="checkbox" name="prod" value="Tratamiento Reparación"> Tratamiento Reparación ($24.000)</label>
+            <label class="item-check"><input type="checkbox" name="prod" value="Sérum Capilar"> Sérum Capilar ($27.000)</label>
+          </div>
+
+          <div style="margin-top: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Mensaje adicional:</label>
+            <textarea name="text" placeholder="¿Tienes alguna duda sobre tu tipo de cabello o el envío?"></textarea>
+          </div>
+          
+          <button type="submit" class="btn-enviar">Confirmar y Enviar por WhatsApp </button>
+        </form>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="index.html#productos" > Volver a ver productos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Raíz Viva. Medellin, Colombia.</p>
+  </footer>
+
+</body>
+</html>
